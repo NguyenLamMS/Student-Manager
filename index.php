@@ -37,7 +37,9 @@
 		        <td><?php echo $row["lastname"] ?></td>
 		        <td><?php echo $row["email"] ?></td>
 		        <td>		  
-		        	<button data-toggle="modal" data-target="#g<?php echo $row['id'] ?>" type="button" class="btn btn-info">Edit </button>		
+		        	<button data-toggle="modal" data-target="#g<?php echo $row['id'] ?>" type="button" class="btn btn-info">Edit </button>
+		        	<a href="delete.php?id=<?php echo $row['id'] ?>"><button type="button" class="btn btn-danger">Delete</button></a>
+
 		        	<!-- modal edit -->
 					<div class="modal fade" id="g<?php echo $row['id'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 					  <div class="modal-dialog" role="document">
@@ -87,9 +89,9 @@
     </tbody>
   </table>
   <div class="row">
-  	<button data-toggle="modal" data-target="#addModal" type="button" class="col-sm" style="margin: 50px;height: 50px;font-size: 18px">Add</button>
-	<button type="button" class="col-sm " style="margin: 50px;height: 50px;font-size: 18px">Up file</button>
-	<button type="button" class="col-sm" style="margin: 50px;height: 50px;font-size: 18px">Refresh</a></button>
+  	<button data-toggle="modal" data-target="#addModal" type="button" class="btn btn-primary col-sm" style="margin: 50px;height: 50px;font-size: 18px">Add</button>
+	<button type="button" class="btn btn-success col-sm text-white" style="margin: 50px;height: 50px;font-size: 18px"><a style="text-decoration: none" class="text-white" href="upfile.php">Up file</a></button>
+	<button type="button" class="btn btn-warning col-sm text-white" style="margin: 50px;height: 50px;font-size: 18px">Refresh</a></button>
   </div>
 </div>
 <!-- modal add -->
